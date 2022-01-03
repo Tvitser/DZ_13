@@ -32,7 +32,7 @@ def page_post_create():
         abort(400)
     path=f"{UPLOAD_FOLDER}/{picture.filename}"
     post={
-        "content":content
+        "content":content,
         "pic":f"/{path}"
     }
     picture.save(path)
